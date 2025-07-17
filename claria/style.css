@@ -1,0 +1,160 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #fff;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #9ca3af;
+}
+
+nav a.active {
+    color: #8D7DAD;
+    border-bottom: 2px solid #8D7DAD;
+}
+
+section {
+    text-align: center;
+    min-height: 100vh;
+}
+
+
+/* Specific styling for the Contact section */
+#contato {
+    background-color: #1a202c; /* Darker background for contrast */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Form input and textarea styling */
+#contato input,
+#contato textarea {
+    background-color: #2d3748; /* Slightly lighter dark for inputs */
+    border: 1px solid #4a5568; /* Border color */
+    color: #e2e8f0; /* Light text color */
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem; /* Rounded corners */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+    transition: all 0.2s ease-in-out;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+    outline: none;
+    border-color: #8D7DAD; /* Teal focus border */
+    box-shadow: 0 0 0 3px rgba(0, 255, 212, 0.5); /* Teal focus ring */
+}
+
+/* Placeholder text color */
+#contato input::placeholder,
+#contato textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* Button base styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 9999px; /* Full rounded for pill shape */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* WhatsApp button specific styles */
+.btn-whatsapp {
+    background-color: #8D7DAD; /* WhatsApp green */
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background-color: #8D7DAD; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Email submit button specific styles */
+.btn-email {
+    background-color: #8D7DAD; /* Teal color */
+    color: #1a202c; /* Dark text for contrast */
+}
+
+.btn-email:hover {
+    background-color: #8D7DAD; /* Slightly darker teal on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Social media icon styling */
+.social-icon {
+    color: #a0aec0; /* Gray color for icons */
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Specific hover colors for social icons */
+.social-icon.instagram:hover { color: #E1306C; } /* Instagram pink */
+.social-icon.tiktok:hover { color: #69C9D0; } /* TikTok blue */
+.social-icon.youtube:hover { color: #FF0000; } /* YouTube red */
+.social-icon.spotify:hover { color: #1DB954; } /* Spotify green */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    section {
+        padding-top: 6rem; /* More offset for smaller screens */
+    }
+    .btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+    .social-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
