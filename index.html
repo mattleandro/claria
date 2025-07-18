@@ -10,29 +10,23 @@
 </head>
 <body class="text-white">
 
-    <nav class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 z-50 shadow-lg py-4">
+    <nav>
         <div class="container mx-auto flex justify-center space-x-8 text-lg font-semibold">
-            <a href="#inicio" class="hover:text-gray-400 transition duration-300">Inicio</a>
-            <a href="#musica" class="hover:text-gray-400 transition duration-300">Música</a>
-            <a href="#sobre" class="hover:text-gray-400 transition duration-300">Sobre</a>
-            <a href="#teatro" class="hover:text-gray-400 transition duration-300">Teatro</a>
-            <a href="#contato" class="hover:text-gray-400 transition duration-300">Contato</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#musica">Música</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#teatro">Teatro</a>
+            <a href="#contato">Contato</a>
         </div>
     </nav>
 
     <section id="inicio">
         <div class="inicio-desktop">
             <img src="assets/inicio.jpg" alt="Imagem de Início (Desktop)">
-            <div class="overlay-text">
-                <h1>Bem-vindo(a) ao Portfólio de Clariá</h1>
-            </div>
         </div>
 
         <div class="inicio-mobile">
-            <img src="assets/inicial_page_mobile.jpg" alt="Imagem de Início (Mobile)">
-            <div class="overlay-text">
-                <h1>Clariá: Arte e Emoção em Cena</h1>
-            </div>
+            
         </div>
     </section>
 
@@ -63,18 +57,18 @@
             <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl mb-12">
                 <h3 class="text-3xl font-semibold text-center mb-8 font-playfair-display">Envie um Email</h3>
 
-                <form action="YOUR_EMAIL_FORM_ENDPOINT" method="POST" class="space-y-6">
+                <form action="#" method="POST" class="space-y-6">
                     <div>
-                        <label for="name" class="block text-lg font-medium text-gray-300 mb-2">Nome:</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div>
-                        <label for="email" class="block text-lg font-medium text-gray-300 mb-2">Email:</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div>
-                        <label for="message" class="block text-lg font-medium text-gray-300 mb-2">Mensagem:</label>
-                        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"></textarea>
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-email text-xl">Enviar Mensagem</button>
@@ -83,16 +77,16 @@
             </div>
 
             <div class="flex justify-center space-x-6">
-                <a href="https://www.instagram.com/aclariclaria" target="_blank" class="social-icon instagram w-10 h-10">
+                <a href="https://www.instagram.com/aclariclaria" target="_blank" class="social-icon">
                     <img src="assets/instagram.svg" alt="Instagram">
                 </a>
-                <a href="https://www.tiktok.com/@aclariclaria" target="_blank" class="social-icon tiktok w-10 h-10">
+                <a href="https://www.tiktok.com/@aclariclaria" target="_blank" class="social-icon">
                    <img src="assets/tiktok.svg" alt="TikTok">
                 </a>
-                <a href="https://www.youtube.com/channel/aclariclaria" target="_blank" class="social-icon youtube w-10 h-10">
+                <a href="https://www.youtube.com/channel/aclariclaria" target="_blank" class="social-icon">
                     <img src="assets/youtube.svg" alt="YouTube">
                 </a>
-                <a href="https://open.spotify.com/intl-pt/album/7sNlDAVnqTf44AsqzYvGc0" target="_blank" class="social-icon spotify w-10 h-10">
+                <a href="https://open.spotify.com/intl-pt/album/7sNlDAVnqTf44AsqzYvGc0" target="_blank" class="social-icon">
                     <img src="assets/spotify.svg" alt="Spotify">
                 </a>
             </div>
