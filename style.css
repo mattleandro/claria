@@ -6,8 +6,6 @@ body {
     margin: 0;
 }
 
-
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
@@ -21,16 +19,6 @@ nav {
     z-index: 50;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     padding: 1rem 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    font-size: 1.125rem;
-    font-weight: 600;
 }
 
 nav a {
@@ -48,15 +36,92 @@ nav a.active {
     border-bottom: 2px solid #8D7DAD;
 }
 
+/* Estilo geral para todas as seções */
 section {
     text-align: center;
-    min-height: 100vh;
+    padding-top: 5rem; /* Espaço para a navegação fixa */
+    padding-bottom: 2rem; /* Espaço inferior para o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Estilos para a seção de início (DESKTOP POR PADRÃO) */
+#inicio {
+    position: relative;
+    width: 100vw; /* Ocupa 100% da largura da viewport */
+    height: 100vh; /* Ocupa 100% da altura da viewport para desktop */
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+#inicio .inicio-desktop,
+#inicio .inicio-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inicio .inicio-desktop img,
+#inicio .inicio-mobile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#inicio .overlay-text {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#inicio .overlay-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 0 1rem;
+}
+
+/* Esconde o conteúdo mobile por padrão e mostra o desktop */
+#inicio .inicio-mobile {
+    display: none;
+}
+#inicio .inicio-desktop {
+    display: flex;
+}
+
+/* Estilo para as imagens das outras seções */
+section:not(#inicio) img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Specific styling for the Contact section */
 #contato {
-    background-color: #1a202c; /* Darker background for contrast */
+    background-color: #1a202c;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -64,21 +129,21 @@ section {
 /* Form input and textarea styling */
 #contato input,
 #contato textarea {
-    background-color: #2d3748; /* Slightly lighter dark for inputs */
-    border: 1px solid #4a5568; /* Border color */
-    color: #e2e8f0; /* Light text color */
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
     padding: 0.75rem 1rem;
-    border-radius: 0.375rem; /* Rounded corners */
+    border-radius: 0.375rem;
     width: 100%;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
     transition: all 0.2s ease-in-out;
 }
 
 #contato input:focus,
 #contato textarea:focus {
     outline: none;
-    border-color: #8D7DAD; /* Teal focus border */
-    box-shadow: 0 0 0 3px rgba(0, 255, 212, 0.5); /* Teal focus ring */
+    border-color: #8D7DAD;
+    box-shadow: 0 0 0 3px rgba(0, 255, 212, 0.5);
 }
 
 /* Placeholder text color */
@@ -94,7 +159,7 @@ section {
     justify-content: center;
     font-weight: 700;
     padding: 1rem 2rem;
-    border-radius: 9999px; /* Full rounded for pill shape */
+    border-radius: 9999px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -102,51 +167,106 @@ section {
 
 /* WhatsApp button specific styles */
 .btn-whatsapp {
-    background-color: #8D7DAD; /* WhatsApp green */
+    background-color: #8D7DAD;
     color: white;
 }
 
 .btn-whatsapp:hover {
-    background-color: #8D7DAD; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #8D7DAD;
+    transform: translateY(-2px);
 }
 
 /* Email submit button specific styles */
 .btn-email {
-    background-color: #8D7DAD; /* Teal color */
-    color: #1a202c; /* Dark text for contrast */
+    background-color: #8D7DAD;
+    color: #1a202c;
 }
 
 .btn-email:hover {
-    background-color: #8D7DAD; /* Slightly darker teal on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #8D7DAD;
+    transform: translateY(-2px);
 }
 
 /* Social media icon styling */
 .social-icon {
-    color: #a0aec0; /* Gray color for icons */
+    color: #a0aec0;
     transition: all 0.3s ease-in-out;
 }
 
 .social-icon:hover {
-    transform: translateY(-2px); /* Slight lift effect */
+    transform: translateY(-2px);
 }
 
 /* Specific hover colors for social icons */
-.social-icon.instagram:hover { color: #E1306C; } /* Instagram pink */
-.social-icon.tiktok:hover { color: #69C9D0; } /* TikTok blue */
-.social-icon.youtube:hover { color: #FF0000; } /* YouTube red */
-.social-icon.spotify:hover { color: #1DB954; } /* Spotify green */
+.social-icon.instagram:hover { color: #E1306C; }
+.social-icon.tiktok:hover { color: #69C9D0; }
+.social-icon.youtube:hover { color: #FF0000; }
+.social-icon.spotify:hover { color: #1DB954; }
 
-/* Responsive adjustments */
+/* Media Query para Mobile (tela até 768px de largura) */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+    /* Ajustes para a seção de início em mobile */
+    #inicio {
+        height: auto;
+        min-height: unset;
+        display: block;
+        padding-top: 0;
     }
+
+    #inicio .inicio-desktop {
+        display: none;
+    }
+
+    #inicio .inicio-mobile {
+        position: static;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #inicio .inicio-mobile img {
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #inicio .overlay-text {
+        position: static;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 1.5rem 1rem;
+        width: 100%;
+        height: auto;
+        margin-top: -5px;
+    }
+
+    #inicio .overlay-text h1 {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    /* REMOVEMOS OU ANULAMOS AS REGRAS QUE FORÇAVAM A NAVEGAÇÃO A SER EM COLUNA EM MOBILE */
+    /* Seu HTML já tem 'flex justify-center space-x-8' na div.container,
+       então o menu já deve ser horizontal por padrão em mobile. */
+    /* Se a navegação ainda empilhar, pode ser devido a um conflito com o Tailwind.
+       Nesse caso, podemos adicionar uma regra explícita para forçar o flex-direction: row */
+    nav .container {
+        flex-direction: row !important; /* Força a direção para linha */
+        flex-wrap: wrap; /* Permite que os itens quebrem linha se não houver espaço suficiente */
+        justify-content: center; /* Mantém a centralização */
+        gap: 0.5rem; /* Ajuste o espaçamento se 2rem for muito grande em telas pequenas */
+        padding: 0 0.5rem; /* Adicione um padding lateral para não colar nas bordas */
+    }
+    
+    /* Reduzir o tamanho da fonte dos links da nav em telas pequenas para caberem */
+    nav .container a {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        padding: 0.5rem; /* Ajusta o padding para links menores */
+    }
+
+    /* Outros ajustes para mobile */
     section {
-        padding-top: 6rem; /* More offset for smaller screens */
+        padding-top: 5rem;
     }
     .btn {
         width: 100%;
@@ -156,5 +276,12 @@ section {
     .social-icon {
         width: 2.5rem;
         height: 2.5rem;
+    }
+}
+
+/* Media Query para telas muito pequenas, se necessário */
+@media (max-width: 480px) {
+    #inicio .overlay-text h1 {
+        font-size: 1.8rem;
     }
 }
